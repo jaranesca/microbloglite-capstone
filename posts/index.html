@@ -1,4 +1,3 @@
-<!-- POSTS page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,35 +8,47 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
 
-    <!-- Global CSS (CSS rules you want applied to all pages) -->
+    <!-- Global CSS -->
     <link rel="stylesheet" href="../global.css">
 
     <!-- Page-specific CSS -->
-    <link rel="stylesheet" href="./posts.css">
+    <link rel="stylesheet" href="style/posts.css">
 
-    <title>/POSTS</title>
+    <title>Posts</title>
 
     <!-- Run BEFORE page is finished loading (before window.onload): -->
-    <script src="../auth.js"></script>
-    <script>
-        if (isLoggedIn() === false) window.location.replace("/");
-    </script>
+    <script src="/script/auth.js"></script>
 </head>
 <body>
-
-    <header>
-        <h1>POSTS PAGE</h1>
+    <header class="header">
+        <div class="header__content">
+            <a href="/" class="logo">Microblog</a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="/posts/" class="nav__link">Posts</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/profile/" class="nav__link">Profile</a>
+                    </li>
+                    <li class="nav__item">
+                        <button onclick="logout()" id="logout" class="nav__link btn btn-link">Logout</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main></main>
+    <main>
+        <div id="cart" class="container mt-4">
+            <!-- Content here -->
+        </div>
+    </main>
 
     <footer></footer>
 
     <!-- Page-specific code -->
-    <script src="./posts.js"></script>
+    <script src="/posts/posts.js"></script>
 </body>
 </html>
